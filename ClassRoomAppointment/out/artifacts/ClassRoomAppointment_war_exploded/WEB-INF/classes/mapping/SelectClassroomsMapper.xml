@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fehead.dao.SelectClassroomsMapper">
+
+    <resultMap type="com.fehead.bean.ClassroomSelectBean" id="Result">
+        <result column="classroom" jdbcType="INTEGER" property="classroom"/>
+    </resultMap>
+    
+    <select id="selectAllClassroomsFromLocation" resultMap="Result">
+        select classroom from buildlevel_classroom where buildlevel=#{buildlevel} and buildlevel_classroom_id in
+        (select buildlevel_classroom_id from classroom_all where build_buildnumber_id in
+        (select build_buildnumber_id from build_buildnumber where buildnumber=#{buildumber} and build_id in
+        (select build_id from build where build=#{build})))
+    </select>
+
+    <select id="selectClassroom" resultMap="Result">
+        SELECT classroom from buildlevel_classroom where buildlevel=#{buildlevel} and buildlevel_classroom_id in
+        (SELECT buildlevel_classroom_id from classroom_all where build_buildnumber_id in
+        (SELECT build_buildnumber_id from build_buildnumber where buildnumber=#{buildnumber} and build_id in
+        (SELECT build_id from build where build=#{build}) and id in
+        (SELECT classroom_id from `query` where time_id in
+        (SELECT id from week_day_time where time=#{time} and week_day_id in
+        (SELECT id from week_day where week=#{week} and day=#{day})))))
+    </select>
+
+</mapper>

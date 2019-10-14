@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fehead.dao.UserSelectMapper">
+
+    <!-- 为了能够获得存储过程的out而创建-->
+    <resultMap id="BaseResultMap" type="com.fehead.bean.UserSelectBean">
+        <result column="organization" property="organization" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="telphone" property="telphone" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+        <result column="build" property="build" jdbcType="VARCHAR"/>
+        <result column="buildnumber" property="buildnumber" jdbcType="VARCHAR"/>
+        <result column="buildlevel" property="buildlevel" jdbcType="INTEGER"/>
+        <result column="day" property="day" jdbcType="INTEGER"/>
+        <result column="time" property="time" jdbcType="INTEGER"/>
+        <result column="week" property="week" jdbcType="INTEGER"/>
+        <result column="classroom" property="classroom" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!-- 使用存储过程-->
+    <select id="selectUserMessage" parameterType="com.fehead.bean.UserSelectBean" statementType="CALLABLE">
+
+        call userSelect(
+          #{organization,jdbcType=VARCHAR,mode=IN},
+          #{name,jdbcType=VARCHAR,mode=IN},
+          #{telphone,jdbcType=VARCHAR,mode=IN},
+          #{description,jdbcType=VARCHAR,mode=IN},
+          #{build,jdbcType=VARCHAR,mode=OUT},
+          #{buildnumber,jdbcType=VARCHAR,mode=OUT},
+          #{buildlevel,jdbcType=INTEGER,mode=OUT},
+          #{day,jdbcType=INTEGER,mode=OUT},
+          #{time,jdbcType=INTEGER,mode=OUT},
+          #{week,jdbcType=INTEGER,mode=OUT},
+          #{classroom,jdbcType=INTEGER,mode=OUT},
+        )
+    </select>
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fehead.dao.ApplyClassroomsMapper">
+
+    <!-- 为了能够获得存储过程的out而创建-->
+    <resultMap id="BaseResultMap" type="com.fehead.bean.ClassroomInsertBean">
+        <result column="build" property="build" jdbcType="VARCHAR"/>
+        <result column="buildnumber" property="buildnumber" jdbcType="VARCHAR"/>
+        <result column="buildlevel" property="buildlevel" jdbcType="INTEGER"/>
+        <result column="day" property="day" jdbcType="INTEGER"/>
+        <result column="time" property="time" jdbcType="INTEGER"/>
+        <result column="week" property="week" jdbcType="INTEGER"/>
+        <result column="classroom" property="classroom" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!-- 使用存储过程-->
+    <select id="insertAllTables" parameterType="com.fehead.bean.ClassroomInsertBean" statementType="CALLABLE">
+
+          call classroomInsert(
+            #{build,jdbcType=VARCHAR,mode=IN},
+            #{buildnumber,jdbcType=VARCHAR,mode=IN},
+            #{buildlevel,jdbcType=INTEGER,mode=IN},
+            #{day,jdbcType=INTEGER,mode=IN},
+            #{time,jdbcType=INTEGER,mode=IN},
+            #{week,jdbcType=INTEGER,mode=IN},
+            #{classroom,jdbcType=INTEGER,mode=IN},
+            #{organization,jdbcType=VARCHAR,mode=IN},
+            #{name,jdbcType=VARCHAR,mode=IN},
+            #{telphone,jdbcType=VARCHAR,mode=IN},
+            #{description,jdbcType=VARCHAR,mode=IN},
+            #{insert_count,jdbcType=INTEGER,mode=OUT}
+          )
+
+    </select>
+</mapper>
