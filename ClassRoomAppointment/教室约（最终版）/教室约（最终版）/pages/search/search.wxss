@@ -1,0 +1,13 @@
+/* pages/search/search.wxss */
+page {
+  background-color: #d2d2d2;
+}
+view.yuyue{
+  height: 100px;
+}
+.section {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}

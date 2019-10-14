@@ -1,0 +1,56 @@
+
+      
+  <view class="login" >
+    <view class="page-header" style="pause: 0px;">
+      <view class="login_h1">组织登录</view>
+    </view>
+            <!-- 会员登录表单 -->
+  <form action="login_check.jsp" method="post" class="form-horizontal">
+
+<!-- 账户 -->
+  <fieldset>
+  <view class="flex-wrp" style="flex-direction:row;">
+                  <view class="flex-item">
+                    账户：
+                </view>
+                  <view class="flex-item">
+                 <input name="username" id="username" placeholder="请输入负责人联系电话" size="38"
+                   class="validate-username" required="required" autofocus=""/>
+                  </view>
+                 </view>
+
+
+<!-- 密码 -->
+<view class="flex-wrp" style="flex-direction:row;">
+  <view class="flex-item">
+  密码：
+  </view>
+  <view class="flex-item" >
+    <input  name="passwords" password='true'  value='{{pwd_val}}' bindblur="bindblur" placeholder="请输入密码"
+     class="validate-password" size="38" maxlength="99"
+     required="required" aria-required="true">
+   </input>
+  </view>
+</view>
+
+<button
+  type="primary"
+  size="{{primarySize}}"
+  loading="{{loading}}"
+  plain="{{plain}}"
+  disabled="{{disabled}}"
+  bindtap="jumpBtn4"
+>
+ 登录
+</button>
+
+<view class="form-group"style="border-top: 1px solid #D9D9D9; margin: 20px;">
+  <view style="float: right; color: #858585; margin-right: 40rpx; margin-top: 10px; font-size: 14px;">没有账户？
+    <navigator url="register"><view class="navigator">立即注册</view></navigator>
+  </view>
+</view>
+
+</fieldset>
+</form>
+</view>
+

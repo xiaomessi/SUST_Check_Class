@@ -1,0 +1,40 @@
+<!--pages/appointment/appointment.wxml-->
+<!--pages/search/search.wxml-->
+  <view class="section section_gap">
+    <view class='title'>
+    <text>您选择的是第{{week}}周星期{{day}}的 \n {{build}}{{buildnumber}}座{{buildlevel}}层的第{{time}}节课  </text>
+    </view>
+  </view>
+  <view class='section'>
+  <view class="section__title">注：如需预约教室请返回首页单击“组织预约”按钮</view>
+    <div class="weui-cells__title"><text>查询结果如下:</text></div>
+    <div class="weui-cells">
+    <div class="weui-cell weui-cell_example" wx:for="{{roomData.data}}" wx:key="">
+      <div class="weui-cell__hd"></div>
+        <div class="weui-cell__bd">
+          <p>{{item.classroom}}</p>
+        </div>
+        <div class="weui-cell__ft" wx:if="{{item.usage}}">已占用</div>
+        <div class="weui-cell__ft1" wx:else>未占用</div>
+    </div>
+  </div>
+    <!-- <checkbox-group name="checkbox">
+      <label wx:for="{{roomData.data}}" wx:key="">
+        <checkbox value="checkbox1" />
+        {{item.classroom}}
+        <image src='../image/page2.png' class='label-image' wx:if="{{item.usage}}"></image>
+        <image src='../image/page1.png' class='label-image' wx:else></image>
+      </label>
+    </checkbox-group> -->
+  </view>
+
+<button
+  type="primary"
+  size="{{primarySize}}"
+  loading="{{loading}}"
+  plain="{{plain}}"
+  disabled="{{disabled}}"
+  bindtap="reback"
+>
+ 返回首页
+</button>

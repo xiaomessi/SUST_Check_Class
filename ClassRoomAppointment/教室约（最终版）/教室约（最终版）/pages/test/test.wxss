@@ -1,0 +1,82 @@
+/* pages/logs/first.wxss */
+
+
+
+
+.login{
+	max-width: 650rpx; margin: 0 auto;padding:0px; border: 2rpx solid #eeeeee;
+}
+
+.page-header {
+padding-bottom: 9px;
+padding-top:-9px;
+margin: 0 0 20px;
+border-bottom: 0px solid #0885B1;
+text-align: center;
+}
+
+.login_h1{
+	color:#333333;background-color: #F2F2F2;padding:15px;font-size:20px;font-weight: bold;
+}
+
+.form-horizontal .form-group {
+margin-left: -15px;
+margin-right: -15px;
+}
+
+.form-group {
+margin-bottom: 20px;
+font-size: 18px;
+}
+
+.form-group:after
+{
+    clear: both;
+}
+.form-group:before, .form-horizontal .form-group:after{
+    content: " ";
+    display: table;
+}
+
+.col-sm-8 {
+        width:100%;
+    }
+
+.col-sm-8{
+        float: left;
+    }
+
+.col-sm-8{
+    position: relative;
+    min-height: 1px;
+}
+
+
+.page-section{
+  margin-bottom: 20rpx;
+}
+.flex-wrp {display: flex;
+margin: 50rpx 0rpx 50rpx 30rpx;
+}
+.bc_green {background: green;width:100px; height: 100px;}
+.bc_red {background: red;width:100px; height: 100px;}
+.bc_blue {background: blue;width:100px; height: 100px;}
+.validate-password{
+  height: 80rpx;
+  border: 2rpx solid #eeeeee;
+}
+.validate-username{
+  height: 80rpx;
+  border: 2rpx solid #eeeeee;
+}
+.flex-item{
+  display: flex;
+  align-items: center;
+
+}
+.text1{
+  width:100px;
+}
+.navigator{
+  color:blue;
+}

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="ClassRoomAppointment archive">
+    <output-path>$PROJECT_DIR$/out/artifacts/ClassRoomAppointment_archive</output-path>
+    <root id="archive" name="ClassRoomAppointment archive.war">
+      <element id="artifact" artifact-name="ClassRoomAppointment" />
+    </root>
+  </artifact>
+</component>

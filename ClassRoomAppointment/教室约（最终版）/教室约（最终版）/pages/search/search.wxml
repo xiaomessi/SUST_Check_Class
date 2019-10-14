@@ -1,0 +1,81 @@
+<!--pages/search/search.wxml-->
+<view class="section">
+  <view class="section__title">选择周次</view>
+  <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+    <view class="picker">
+      点击选择：{{array1[index1]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">选择星期</view>
+  <picker bindchange="bindPickerChange5" value="{{index5}}" range="{{array5}}">
+    <view class="picker">
+      点击选择：{{array5[index5]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">选择节次</view>
+  <picker bindchange="bindPickerChange4" value="{{index4}}" range="{{array4}}">
+    <view class="picker">
+      点击选择：{{array4[index4]}}节
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">选择教学楼</view>
+  <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+    <view class="picker">
+      点击选择：{{array2[index2]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">选择楼号</view>
+  <picker bindchange="bindPickerChange6" value="{{index6}}" range="{{array6}}">
+    <view class="picker">
+      点击选择：{{array6[index6]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">选择楼层</view>
+  <picker bindchange="bindPickerChange3" value="{{index3}}" range="{{array3}}">
+    <view class="picker">
+      点击选择：{{array3[index3]}}
+    </view>
+  </picker>
+</view>
+
+
+
+
+
+<!-- <view class="section">
+ <p>选择楼层：</p>
+ <checkbox-group bindchange="checkboxChange">
+  <label class="checkbox" wx:for="{{items}}" wx:key="">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}" />
+    {{item.value}}
+  </label>
+ </checkbox-group>
+</view> -->
+
+
+<button
+  type="primary"
+  size="{{primarySize}}"
+  loading="{{loading}}"
+  plain="{{plain}}"
+  disabled="{{disabled}}"
+  bindtap="jumpBtn3"
+>
+ 查询空余教室
+</button>
+

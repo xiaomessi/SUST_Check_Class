@@ -1,0 +1,46 @@
+<!--pages/apply/apply.wxml-->
+  <view class="section section_gap">
+   <text>您选择的是第{{week}}周星期{{day}}的 \n {{build}}{{buildnumber}}座{{buildlevel}}层的第{{time}}节课 </text>
+  </view>
+  <view class='section'>
+  <view class='yuyue'>查询结果如下，点击下方按钮即可预约:</view>
+  <view class="section__title">注：可选为空教室，不可选为有课或预约教室</view>
+    <checkbox-group name="checkbox" bindchange="chb">
+      <label wx:for="{{roomData.data}}" wx:key="">
+        <image src='../image/page2.png' style="width:100px;height:100px"></image>
+        <checkbox value="{{item.classroom}}" checked='{{item.checked}}' disabled="{{item.usage}}"/>
+        {{item.classroom}}
+        <!-- <image src='../image/page6.jpg' class='label-image' wx:if="{{item.usage}}"></image>
+        <image src='../image/page2.png' class='label-image' wx:else></image> -->
+      </label>
+    </checkbox-group>
+</view>
+
+<button type="primary" size="{{primarySize}}" bindtap="apply">预约所选教室</button>
+
+<!-- <label class="weui-cell weui-check__label" for="s12">
+      <div class="weui-cell__hd">
+          <input type="checkbox" name="checkbox1" class="weui-check" id="s12"/>
+          <i class="weui-icon-checked"></i>
+      </div>
+      <div class="weui-cell__bd">
+          <p>standard is dealicient for u.</p>
+      </div>
+</label> -->
+
+<checkbox-group bindchange="checkboxChange">
+  <label class="checkbox" wx:for="{{items}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</checkbox-group>
+
+
+
+<!-- <div class="main" style="position:relative;">
+    <div class="img">
+        <img alt="图片名称" src="plug-in/image/Desert.jpg" style="width:100px;height:100px">
+    </div>
+    <div class="checkbox" style="position:absolute;top:0;right:0;z-index:1000">
+       <input id="box" type="checkbox" name="box">
+    </div>
+    </div> -->

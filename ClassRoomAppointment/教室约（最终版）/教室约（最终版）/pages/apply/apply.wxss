@@ -1,0 +1,14 @@
+/* pages/apply/apply.wxss */
+page {
+  background-color: #d2d2d2;
+}
+.section {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+.label-image{
+  height: 90px;
+  width: 120px;
+}

@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Class-Path: mybatis-spring-boot-autoconfigure-1.3.3.jar spring-web-5.0
+ .9.RELEASE.jar jackson-datatype-jdk8-2.9.6.jar jackson-databind-2.9.6
+ .jar spring-beans-5.0.9.RELEASE.jar jackson-annotations-2.9.0.jar spr
+ ing-boot-starter-logging-2.0.5.RELEASE.jar spring-expression-5.0.9.RE
+ LEASE.jar spring-core-5.0.9.RELEASE.jar jul-to-slf4j-1.7.25.jar mybat
+ is-3.4.6.jar jackson-module-parameter-names-2.9.6.jar spring-jcl-5.0.
+ 9.RELEASE.jar logback-core-1.2.3.jar spring-aop-5.0.9.RELEASE.jar spr
+ ing-boot-starter-json-2.0.5.RELEASE.jar jackson-datatype-jsr310-2.9.6
+ .jar tomcat-embed-websocket-8.5.34.jar javax.annotation-api-1.3.2.jar
+  HikariCP-2.7.9.jar spring-boot-starter-jdbc-2.0.5.RELEASE.jar spring
+ -webmvc-5.0.9.RELEASE.jar mysql-connector-java-5.1.47.jar spring-boot
+ -autoconfigure-2.0.5.RELEASE.jar spring-boot-starter-2.0.5.RELEASE.ja
+ r druid-1.1.12.jar spring-context-5.0.9.RELEASE.jar slf4j-api-1.7.25.
+ jar tomcat-embed-core-8.5.34.jar spring-boot-starter-tomcat-2.0.5.REL
+ EASE.jar logback-classic-1.2.3.jar spring-tx-5.0.9.RELEASE.jar log4j-
+ to-slf4j-2.10.0.jar spring-boot-starter-web-2.0.5.RELEASE.jar mybatis
+ -spring-boot-starter-1.3.3.jar jackson-core-2.9.6.jar validation-api-
+ 2.0.1.Final.jar jboss-logging-3.3.2.Final.jar spring-jdbc-5.0.9.RELEA
+ SE.jar log4j-api-2.10.0.jar hibernate-validator-6.0.12.Final.jar snak
+ eyaml-1.19.jar tomcat-embed-el-8.5.34.jar spring-boot-2.0.5.RELEASE.j
+ ar classmate-1.3.4.jar mybatis-spring-1.3.2.jar
+Main-Class: com.fehead.App
+

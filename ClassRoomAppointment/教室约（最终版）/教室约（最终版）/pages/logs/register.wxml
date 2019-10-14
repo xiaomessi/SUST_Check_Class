@@ -1,0 +1,98 @@
+  
+    
+      
+        <view class="login-wrap"
+          style="margin-bottom: 60px; margin-top: 50rpx">
+          
+          <view class="login">
+            <view class="page-header" style="pause: 0px;">
+              <view class="login_h1">注册组织账户</view>
+            </view>
+            <!-- 会员注册表单 -->
+            
+            <form id="member-registration" action="register_deal.jsp"
+              onsubmit="return regis();" method="post" class="form-horizontal">
+
+              <fieldset>
+              <view classroom="from">
+                <view class="flex-wrp" style="flex-direction:row;">
+                  <view class="flex-item" >
+                    <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;组织名：</text>
+                </view>
+                  <view class="flex-item">
+                 <input name="username" id="username" placeholder="请输入社团或组织名" size="38"
+                   class="validate-username" required="required" autofocus=""/>
+                  </view>
+                 </view>
+
+                <view class="flex-wrp" style="flex-direction:row;">
+                  <view class="flex-item">
+                    <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;负责人：</text>
+                </view>
+                  <view class="flex-item">
+                 <input name="username" id="username" placeholder="请输入负责人姓名" size="38"
+                   class="validate-username" required="required" autofocus=""/>
+                  </view>
+                 </view>
+
+              <view class="flex-wrp" style="flex-direction:row;">
+                  <view class="flex-item">
+                    联系电话：
+                </view>
+                  <view class="flex-item">
+                 <input maxlength="11" type="number" name="username" id="username" placeholder="请输入联系电话" size="38"
+                   class="validate-username" />
+                  </view>
+                 </view>
+
+                <view class="flex-wrp" style="flex-direction:row;">
+                  <view class="flex-item">
+                   <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：</text>
+                  </view>
+                  <view class="flex-item" >
+                    <input  name="passwords" password='true'  value='{{pwd_val}}' bindblur="bindblur" placeholder="请输入密码"
+                    class="validate-password" size="38" maxlength="99"
+                    required="required" aria-required="true">
+                    </input>
+                  </view>
+                 </view>
+
+ <view class="flex-wrp" style="flex-direction:row;">
+  <view class="flex-item">
+   确认密码：
+  </view>
+  <view class="flex-item" >
+    <input  name="passwords" password='true'  value='{{pwd_val}}' bindblur="bindblur" placeholder="请再次输入密码"
+     class="validate-password" size="38" maxlength="99"
+     required="required" aria-required="true">
+   </input>
+  </view>
+</view>
+</view>
+                  
+                
+                
+                
+                  
+                
+                  
+    <button
+  type="primary"
+  size="{{primarySize}}"
+  loading="{{loading}}"
+  plain="{{plain}}"
+  disabled="{{disabled}}"
+  bindtap="jumpBtn3"
+>
+ 立即注册
+</button>
+               
+                <view class="form-group"style="border-top: 1px solid #D9D9D9; margin: 20px;">
+  <view style="float: right; color: #858585; margin-right: 40rpx; margin-top: 10px; font-size: 14px;">已有账户
+    <navigator url="login"><view class="navigator">去登陆</view></navigator>
+  </view>
+</view>
+              </fieldset>
+            </form>
+          </view>
+        </view>

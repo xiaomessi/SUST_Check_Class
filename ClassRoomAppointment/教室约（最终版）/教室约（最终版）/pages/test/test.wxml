@@ -1,0 +1,86 @@
+  
+    
+      
+        <view class="login-wrap"
+          style="margin-bottom: 60px; margin-top: 50rpx">
+          
+          <view class="login">
+            <view class="page-header" style="pause: 0px;">
+              <view class="login_h1">社团登记</view>
+            </view>
+            <!-- 会员注册表单 -->
+            
+            <form id="member-registration" action="register_deal.jsp"
+              onsubmit="return regis();" method="post" class="form-horizontal">
+
+              <fieldset>
+              <view classroom="from">
+                <view class="flex-wrp" style="flex-direction:row;">
+                  <view class="flex-item" >
+                    <text class='text1' decode="true">&nbsp;&nbsp;&nbsp;&nbsp;组织名：</text>
+                </view>
+                  <view class="flex-item">
+                 <input   bindblur="organization" name="username" 
+                 id="username" placeholder-style="color:#BBBBBB"
+                 placeholder="请输入社团或组织名" size="38"
+                   class="validate-username" required="required" autofocus="" />
+                  </view>
+                 </view>
+
+                <view class="flex-wrp" style="flex-direction:row;">
+                  <view class="flex-item">
+                    <text class='text1' decode="true">&nbsp;&nbsp;&nbsp;&nbsp;负责人：</text>
+                </view>
+                  <view class="flex-item">
+                 <input bindblur="name" placeholder-style="color:#BBBBBB"
+                 name="username" id="username" placeholder="请输入负责人姓名" size="38"
+                   class="validate-username" required="required" autofocus=""/>
+                  </view>
+                 </view>
+
+              <view class="flex-wrp" style="flex-direction:row;">
+                  <view class="flex-item">
+                    <text class='text1' decode="true">联系电话：</text>
+                </view>
+                  <view class="flex-item">
+                 <input bindblur="telphone" maxlength="11" name="username" value="{{telphone}}"
+                  id="username" placeholder-style="color:{{color}}" placeholder="请输入11位的联系电话" size="38"
+                   class="validate-username" required="required" autofocus=""/>
+                  </view>
+                 </view>
+
+
+                 <view class="flex-wrp" style="flex-direction:row;">
+                  <view class="flex-item">
+                    <text class='text1' decode="true">申请事由：</text>
+                </view>
+                  <view class="flex-item">
+                 <input bindblur="description" placeholder-style="color:#BBBBBB" 
+                 name="username" id="username" placeholder="请输入申请事由" size="38"
+                   class="validate-username" required="required" autofocus=""/>
+                  </view>
+                 </view>
+</view>
+                  
+                
+                
+                
+                  
+                
+                  
+    <button
+  type="primary"
+  size="{{primarySize}}"
+  loading="{{loading}}"
+  plain="{{plain}}"
+  disabled="{{disabled}}"
+  bindtap="degnji"
+>
+ 立即申请
+</button>
+               
+                
+              </fieldset>
+            </form>
+          </view>
+        </view>

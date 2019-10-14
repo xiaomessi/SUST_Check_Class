@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.fehead.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.035 s <<< FAILURE! - in com.fehead.AppTest
+initializationError(com.fehead.AppTest)  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/hamcrest/SelfDescribing
+Caused by: java.lang.ClassNotFoundException: org.hamcrest.SelfDescribing
+

@@ -1,0 +1,31 @@
+<!--pages/success/success.wxml-->
+<swiper autoplay="{{autoplay}}">
+  <block wx:for="{{imgUrls}}" wx:key="">
+    <swiper-item>
+      <image src="../image/page4.jpg" class="slide-image"  />
+    </swiper-item>
+    <swiper-item>
+      <image src="../image/page3.jpg" class="slide-image"  />
+    </swiper-item>
+    <swiper-item>
+      <image src="../image/page5.jpg" class="slide-image"  />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="section section_gap">
+   <text>恭喜您预约成功！\n\n</text>
+   <text>您预约的时间是是第{{week}}周星期{{day}}的第{{time}}节课 \n</text>
+   <text>教室为{{build}}{{buildnumber}}座{{buildlevel}}层的{{classroom}}教室 \n\n</text>
+   <text>请准时前往教室，谢谢！</text>
+</view>
+
+<button
+  type="primary"
+  size="{{primarySize}}"
+  loading="{{loading}}"
+  plain="{{plain}}"
+  disabled="{{disabled}}"
+  bindtap="reback"
+>
+ 返回首页
+</button>

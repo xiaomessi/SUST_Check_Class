@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<swiper autoplay="{{autoplay}}">
+  <block wx:for="{{imgUrls}}" wx:key="">
+    <swiper-item>
+      <image src="../image/page4.jpg" class="slide-image"  />
+    </swiper-item>
+    <swiper-item>
+      <image src="../image/page3.jpg" class="slide-image"  />
+    </swiper-item>
+    <swiper-item>
+      <image src="../image/page5.jpg" class="slide-image"  />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='zujian'>
+  <button class='search' bindtap="showA">教室查询</button>
+  <button class='appointment' bindtap="showB">组织预约</button>
+  <button bindtap="showC">我的信息</button>
+</view>
+
+<view wx:if="{{aFlag}}" class='first'>
+<text>第一步：点击下方查询按钮至查询页面；\n \n 第二步：对你需要查询的教室信息筛选；\n \n 第三步：点击下方查询按钮即可查询到当前楼层的教室占用情况。</text>
+  <button  type="primary" bindtap='jumpBtn1' class='button1'>查询</button>
+</view>
+<view wx:if="{{bFlag}}" class='second'>
+<text>第一步：点击预约按钮跳转至信息绑定页面；\n \n 第二步：绑定成功后对你需要查询的教室信息筛选；\n \n 第三步：查询到空教室后，选择空教室即可预约；\n \n 第四步：预约成功后显示你预约的教室。</text>
+  <button  type="primary" bindtap='jumpBtn2' class='button2'>预约</button>
+</view>
+<view wx:if="{{cFlag}}" style='white-space:pre-wrap' class='women'>
+
+<view>
+头像：<image class="avatar" src='{{userInfo.avatarUrl}}'></image>\n
+<view class="nickname">昵称：{{userInfo.nickName}}</view>
+负责人电话：{{telphone_}}\n
+所属社团/组织：{{organization_}} \n
+社团/组织负责人：{{name_}}\n
+您预定的教室:
+
+{{classroom}}
+<!-- 您预定的教室:{{array1[0].build}}  {{array1[0].buildnumber}}楼
+{{array1[0].buildlevel}}层    0{{array1[0].classroom}}室 -->
+<!-- 
+{{array1[1].build}}  {{array1[1].buildnumber}}楼
+{{array1[1].buildlevel}}层    0{{array1[1].classroom}}室
+
+{{array1[1].build}}  {{array1[1].buildnumber}}楼
+{{array1[1].buildlevel}}层    0{{array1[1].classroom}}室 -->
+</view>
+<p class="weui-footer__text">Copyright © 2008-2016 weui.io</p>
+</view>
+

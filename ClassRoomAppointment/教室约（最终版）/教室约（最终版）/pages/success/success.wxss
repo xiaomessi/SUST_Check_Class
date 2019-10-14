@@ -1,0 +1,13 @@
+/* pages/success/success.wxss */
+swiper{
+  width: 100%;
+  height: 150px;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.section{
+   text-align: center;
+   color: red;
+}

@@ -1,0 +1,50 @@
+/**index.wxss**/
+swiper{
+  width: 100%;
+  height: 150px;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.zujian{
+  display:flex;
+  padding: 10px;
+}
+button.search{
+  align-content: left;
+}
+button.appointment{
+  align-content: right;
+}
+view.first{
+  /* border-style: solid ;
+  border-width: 5px; */
+  height: 270px;
+}
+
+.second{
+  height: 300px;
+}
+.avatar{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+}
+button.button1{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+}
+button.button2{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+}
+view.women{
+  text-align: center;
+}
