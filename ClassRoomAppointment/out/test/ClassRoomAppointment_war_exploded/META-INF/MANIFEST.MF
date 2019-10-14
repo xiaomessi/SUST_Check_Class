@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: ClassRoomAppointment
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: xiaoaxiao
+Implementation-Vendor-Id: com.fehead
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8
+Main-Class: ${start-class}
+
